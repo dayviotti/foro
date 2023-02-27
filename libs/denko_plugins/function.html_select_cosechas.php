@@ -1,0 +1,23 @@
+<?php
+function smarty_function_html_select_cosechas($params) {
+
+    global $cosechas;
+
+    $class = isset($params['class']) ? $params['class'] : '';
+    $style = isset($params['style']) ? $params['style'] : '';
+    $name = isset($params['name']) ? $params['name'] : '';
+    $id = isset($params['id']) ? $params['id'] : '';
+    $disabled = isset($params['disabled']) && $params['disabled'] === true ? ' disabled ' : '';
+    $val = isset($params['value'])? $params['value'] : '';
+    $default = isset($params['default'])? $params['default'] : 'NO ESPECIFICADO';
+
+    echo '<select name="'.$name.'" class="'.$class.'" style="'.$style.'" id="'.$id.'" '.$disabled.'>';
+    echo '<option value="-1">'.$default.'</option>';
+    foreach($cosechas as $key => $value) {
+        $selected = ($key == $val) ? ' selected="selected" ' : '';
+        echo '<option value="'.$key.'" '.$selected.'>'.$value.'</option>';
+    }
+    echo '</select>';
+
+
+}

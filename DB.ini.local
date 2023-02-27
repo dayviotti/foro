@@ -1,0 +1,5 @@
+[DB_DataObject]
+;LOCALHOST
+database        = mysqli://root:@localhost:3307/foro
+schema_location = "../DAOs"
+class_location  = "../DAOs"

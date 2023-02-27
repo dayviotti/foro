@@ -1,0 +1,14 @@
+RewriteEngine on
+
+
+# Reglas para las versiones de archivos JS y CSS
+RewriteRule ^js-([0-9]{12})-c/(.*).js$ templates_c/compressed.$2.js
+RewriteRule ^js-(.*)/(.*) js/$2
+RewriteRule ^styles-([0-9]{12})-c/(.*).css$ templates_c/compressed.$2.css
+RewriteRule ^styles-(.*)/(.*) styles/$2
+
+# Previene la navegación en los directorios
+Options -Indexes
+
+# Muestra el Favicon en internet explorer
+RewriteRule ^favicon.ico images/favicon.ico
