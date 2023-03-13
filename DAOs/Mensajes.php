@@ -15,6 +15,7 @@ class Mensajes extends DB_DataObject
     public $post;                            // varchar(400)  not_null
     public $fecha;                           // varchar(10)  not_null
     public $usuario;                         // varchar(40)  not_null
+    public $categoria;                       // varchar(100)  not_null
 
     /* Static get */
     function staticGet($k,$v=NULL) { return DB_DataObject::staticGet('Mensajes',$k,$v); }

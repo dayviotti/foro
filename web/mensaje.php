@@ -6,6 +6,8 @@ require_once 'funciones/funMensaje.php';
 $smarty = new Smarty;
 
 $smarty->addPluginsDir(array("../libs/denko_plugins"));
+$smarty->loadFilter('output','dk_include');
+
 $daoMensaje = DB_DataObject::factory('mensajes');
 
 if(isset($_GET['id'])){
@@ -15,16 +17,37 @@ else {
     $idm = $_POST['id'];
 }
 
-$daoMensaje->get($idm);
+if (!$daoMensaje->get($idm)){
+    Denko :: redirect('error.php?code=500');
+}
 
-$daoComentario = DB_DataObject::factory('comentarios');
-$daoComentario->idmsje=$idm;
-$daoComentario->find();
 
-comentar();
-votar();
+if (isset($_POST['action'])) {
+    switch ($_POST['action']) {
+        case 'add':
+            if(comentario_add($idm)){
+                Denko:: redirect('mensaje.php?id=' . $idm);
+            }
+            break;
+    }
+}
+
+if (isset($_GET['action'])) {
+
+    switch ($_GET['action']) {
+        case 'votar':
+            if(!votar()){
+                Denko :: redirect('error.php?code=500');
+            }
+            else {
+                Denko :: redirect('mensaje.php?id=' . $idm);
+            }
+            break;
+    }
+    exit;
+}
+
 
 $smarty->assign('idm',$idm);
 $smarty->assign('daoMensaje',$daoMensaje);
-$smarty->assign('daoComentario',$daoComentario);
 $smarty->display('mensaje.tpl');

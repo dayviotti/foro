@@ -1,12 +1,23 @@
 <?php
-function comentar(){
-    if(isset($_GET['id'])){
-        $idm = $_GET['id'];
+
+function mensaje_validate_comentario() {
+    if (!isset($_POST['comentario']) ||  $_POST['comentario'] == '') {
+        Denko :: addErrorMessage("El contenido del Comentario es requerido.");
     }
-    else {
-        $idm = $_POST['id'];
+    return !Denko :: hasErrorMessages();
+}
+
+function comentario_add($idm)
+{
+    if (!mensaje_validate_comentario()) {
+        return false;
     }
-    if($_POST['comentario']!="") {
+    else{
+        return comentar($idm);
+    }
+}
+function comentar($idm){
+
         $daoComentario = DB_DataObject::factory('comentarios');
         $daoComentario->idmsje = $idm;
         $daoComentario->texto = $_POST['comentario'];
@@ -15,8 +26,7 @@ function comentar(){
         $daoComentario->fecha = $fecha;
         $daoComentario->usuario = $usuario;
         $daoComentario->votos = 0;
-        $daoComentario->insert();
-    }
+        return $daoComentario->insert();
 }
 
 function votar(){
@@ -29,7 +39,7 @@ function votar(){
             $votos = intval($daoComentario->votos);
             $nuevos = $votos+1;
             $daoComentario->votos = $nuevos;
-            $daoComentario->update();
+            return $daoComentario->update();
         }
     }
 }

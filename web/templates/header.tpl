@@ -2,6 +2,8 @@
 <html>
 <head>
     <link rel="stylesheet" href="http://localhost/demo/web/styles/estilos.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
@@ -20,7 +22,7 @@
             </button>
             <a class="brand linknav" href="#">FORO</a>
         </div>
-        {if $smarty.server.SCRIPT_NAME=='/demo/web/register.php' || $smarty.server.SCRIPT_NAME=='/demo/web/login.php'}
+        {if $smarty.server.SCRIPT_NAME=='/demo/web/register.php' || $smarty.server.SCRIPT_NAME=='/demo/web/login.php' || $smarty.server.SCRIPT_NAME=='/demo/web/error.php' || $smarty.server.SCRIPT_NAME=='/demo/web/categorias.php'}
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a class="linklgn" href="http://localhost/demo/web/index.php"><button class="btn btniniciolgn">Inicio</button></a></li>
@@ -45,4 +47,12 @@
     </div><!-- /.container-fluid -->
 </nav>
         {/if}
+
+<script src="../js/bootstrap/js/bootstrap.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/jquery-3.1.1.min.js"></script>
+
+
+
+
 

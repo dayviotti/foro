@@ -1,0 +1,12 @@
+[
+    {
+        "id": "7",
+        "idpadre": "6",
+        "nombre": "arbol"
+    },
+    {
+        "id": "20",
+        "idpadre": "1",
+        "nombre": "ca"
+    }
+]

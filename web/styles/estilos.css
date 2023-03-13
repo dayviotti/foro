@@ -167,8 +167,7 @@ P.error{
     width: 50%;
     border-top: #e2c3ff solid 1px;
     border-bottom: #e2c3ff solid 1px;
-    padding-top: 20px;
-    padding-bottom: 30px;
+    padding: 10px 40px 30px;
 }
  .mensaje{
      font-family: "Times New Roman";
@@ -185,6 +184,7 @@ P.error{
 
  #divmens{
      padding-bottom: 10px;
+     margin-top: 20px;
  }
 
  .tit{
@@ -248,7 +248,97 @@ P.error{
 }
 
 #btnbusqueda{
-    margin-top: 8px;
+    margin-top: 15px;
     background-color: #d9b9f6;
     color: #5c367f;
+}
+
+P.error2{
+    color: #e2c3ff;
+    font-family: 'bebas neue';
+    font-size: 5vw;
+}
+
+#containererror {
+    margin-top: 150px;
+    background-color: #5c367f;
+    padding: 20px 10px 0px 10px;
+    width: 70vw;
+}
+
+/*TABLA CAT*/
+
+.eliminar {
+    width: 25px;
+    cursor: pointer;
+}
+
+.editar {
+    width: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.anadir {
+    width: 25px;
+}
+
+.titulo {
+    padding: 5px ;
+}
+
+h1 {
+    margin-left: 10px;
+}
+
+.table {
+    background-color: #d9b9f6;
+    margin-top: 80px;
+}
+
+#menu{
+    background-color: #301d42;
+    padding: 10px;
+}
+
+#agregar {
+    border: 1px solid #843ca2;
+    background-color: #d9b9f6;
+    margin: 30px 0;
+    color: #5c367f;
+    font-family: 'bebas neue';
+    font-size: 15px;
+
+}
+
+.text {
+    color: #d9b9f6;
+    margin-top: 10px;
+}
+
+#cat{
+    font-family:  'Alfa Slab One', cursive;
+    color: #280f41;
+    font-size: 40px;
+    margin-right: 15px;
+}
+
+.divedit{
+    margin-top: 80px;
+    margin-left: 10px;
+}
+
+.buscar{
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+.glyphicon-search{
+    font-size: 22px;
+    color: #d9b9f6;
+}
+
+.alert{
+    background-color: #5a3588;
+    color: #d9b9f6;
 }

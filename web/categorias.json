@@ -1,0 +1,30 @@
+[
+    {
+        "id": "1",
+        "nombre": "loco"
+    },
+    {
+        "id": "15",
+        "nombre": "hola"
+    },
+    {
+        "id": "16",
+        "nombre": "propiedades"
+    },
+    {
+        "id": "6",
+        "nombre": "naturaleza"
+    },
+    {
+        "id": "8",
+        "nombre": "television"
+    },
+    {
+        "id": "9",
+        "nombre": "religion"
+    },
+    {
+        "id": "10",
+        "nombre": "belleza"
+    }
+]

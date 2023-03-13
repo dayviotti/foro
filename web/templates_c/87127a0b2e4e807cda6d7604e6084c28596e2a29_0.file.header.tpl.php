@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2023-02-27 12:20:09
+/* Smarty version 3.1.30, created on 2023-03-10 08:32:11
   from "C:\wamp64\www\demo\web\templates\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_63fcca29695090_55496279',
+  'unifunc' => 'content_640b153bd6ec47_25614666',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '87127a0b2e4e807cda6d7604e6084c28596e2a29' => 
     array (
       0 => 'C:\\wamp64\\www\\demo\\web\\templates\\header.tpl',
-      1 => 1677356700,
+      1 => 1678255569,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63fcca29695090_55496279 (Smarty_Internal_Template $_smarty_tpl) {
+function content_640b153bd6ec47_25614666 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" href="http://localhost/demo/web/styles/estilos.css">
+    <?php echo '<script'; ?>
+ src="../js/jquery-3.1.1.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="../js/jquery-ui.min.js"><?php echo '</script'; ?>
+>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
@@ -44,7 +50,7 @@ function content_63fcca29695090_55496279 (Smarty_Internal_Template $_smarty_tpl)
             </button>
             <a class="brand linknav" href="#">FORO</a>
         </div>
-        <?php if ($_SERVER['SCRIPT_NAME'] == '/demo/web/register.php' || $_SERVER['SCRIPT_NAME'] == '/demo/web/login.php') {?>
+        <?php if ($_SERVER['SCRIPT_NAME'] == '/demo/web/register.php' || $_SERVER['SCRIPT_NAME'] == '/demo/web/login.php' || $_SERVER['SCRIPT_NAME'] == '/demo/web/error.php' || $_SERVER['SCRIPT_NAME'] == '/demo/web/categorias.php') {?>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a class="linklgn" href="http://localhost/demo/web/index.php"><button class="btn btniniciolgn">Inicio</button></a></li>
@@ -70,6 +76,20 @@ function content_63fcca29695090_55496279 (Smarty_Internal_Template $_smarty_tpl)
     </div><!-- /.container-fluid -->
 </nav>
         <?php }?>
+
+<?php echo '<script'; ?>
+ src="../js/bootstrap/js/bootstrap.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="../js/jquery-ui.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="../js/jquery-3.1.1.min.js"><?php echo '</script'; ?>
+>
+
+
+
+
 
 <?php }
 }

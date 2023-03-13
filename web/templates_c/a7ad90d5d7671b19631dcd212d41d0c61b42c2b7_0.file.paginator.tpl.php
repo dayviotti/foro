@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2023-02-27 12:20:09
+/* Smarty version 3.1.30, created on 2023-03-10 08:32:11
   from "C:\wamp64\www\demo\web\templates\includes\paginator.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_63fcca29729b28_80042756',
+  'unifunc' => 'content_640b153bdd2be0_03346629',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63fcca29729b28_80042756 (Smarty_Internal_Template $_smarty_tpl) {
+function content_640b153bdd2be0_03346629 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_block_dkp_ini')) require_once 'C:\\wamp64\\www\\demo\\libs\\denko_plugins\\block.dkp_ini.php';
 if (!is_callable('smarty_function_dkp_hrefpage')) require_once 'C:\\wamp64\\www\\demo\\libs\\denko_plugins\\function.dkp_hrefpage.php';
 ?>
